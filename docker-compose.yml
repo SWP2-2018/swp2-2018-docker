@@ -1,12 +1,26 @@
 version: '3'
 services:
-  web:
+  tomcat:
     restart: always
-    build: ./websrv
+    build: ./tomcat
     ports:
-     - "80:80"
+     - "80:8080"
     volumes:
-     - ../swp2-2018:/code
+     - ./code:/code
+  mariadb:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+  phpmyadmin:
+    restart: always
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mariadb:db
+    ports:
+     - "8090:80"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
 volumes:
-  swp2-2018:
+  code:
