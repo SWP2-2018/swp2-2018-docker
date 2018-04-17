@@ -2,7 +2,7 @@
 
 ```
 
-Repository des "Informatik Softwareprojekt" dert HFT Stuttgart im Sommersemester 2018
+Repository des "Informatik Softwareprojekt" der HFT Stuttgart im Sommersemester 2018
 
 ```
 
@@ -17,8 +17,12 @@ Repository des "Informatik Softwareprojekt" dert HFT Stuttgart im Sommersemester
 3. Dieses Repository klonen und in den Ordner wechseln
 4. Auf Kommandozeile wechseln und folgenden Befehl ausführung
    `docker-compose up -d`
-5. Der Datei `C:\Windows\System32\drivers\etc\hosts` folgende Werte hinzufühen
-5. http://localhost:8080
+5. Der Datei `C:\Windows\System32\drivers\etc\hosts` folgende Zeile hinzufügen:
+```
+127.0.0.1 swp2.dev 
+```
+5. Der Webserver ist nun unter ```http://swp2.dev``` erreichbar
+6. Das Arbeitsverzeichnis ist nun ```swp2-2018```
 
 ### Kommandos
 

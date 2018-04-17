@@ -1,6 +1,7 @@
 version: '3'
 services:
   web:
+    restart: always
     build: ./websrv
     ports:
      - "80:80"
