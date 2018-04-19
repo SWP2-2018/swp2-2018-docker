@@ -1,4 +1,5 @@
-@Echo Off
+@echo off
+
 Setlocal EnableDelayedExpansion
 Set _RNDLength=32
 Set _Alphanumeric=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
