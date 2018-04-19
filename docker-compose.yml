@@ -3,8 +3,12 @@ services:
   tomcat:
     restart: always
     build: ./tomcat
+    command: catalina.sh jpda run
+    environment:
+        JPDA_ADDRESS: 8000
     ports:
      - "80:8080"
+     - "8000:8000"
     volumes:
      - ./code:/code
   mariadb:
