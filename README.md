@@ -14,8 +14,9 @@ https://docs.docker.com/install/#desktop
 2. Docker starten, am besten nicht im "Windows Container"-Modus
 3. Dieses Repository klonen und in den Ordner wechseln
 ```
-git clone --recurse-submodules https://github.com/SWP2-2018/swp2-2018-docker.git
+git clone https://github.com/SWP2-2018/swp2-2018-docker.git
 cd swp2-2018-docker
+git clone https://github.com/SWP2-2018/swp2-2018.git code
 ```
 4. Je nach Betriebssystem das entsprechende `init.{sh,bat}` Skript ausführen
 5. Anschließend muss mit dem Kommando `docker-compose build` das Erstellen der Docker-Container angestoßen werden.
