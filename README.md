@@ -37,4 +37,5 @@ Den Host (IP-Adresse) des Datenbank-Servers müsst ihr im Code als `db` angeben,
 -  `docker-compose ps`: Laufende Container anzeigen
 -  `docker-compose up -d`: Alle Container starten (-d = detached)
 -  `docker-compose down`: Alle laufenden Container beenden
-
+-  `docker-compose down -v`: Alle laufenden Container beenden UND VOLUMES LÖSCHEN -> Benötigt für neuaufsetzen der Datenbank
+-  `docker-compose build --no-cache`: Build der Container ohne Cache
