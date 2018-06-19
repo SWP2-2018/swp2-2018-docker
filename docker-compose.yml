@@ -4,11 +4,8 @@ services:
     restart: always
     build: ./tomcat
     command: catalina.sh jpda run
-    environment:
-        JPDA_ADDRESS: 8000
     ports:
      - "80:8080"
-     - "8000:8000"
     volumes:
      - ./code:/code
   mariadb:
@@ -19,15 +16,6 @@ services:
     volumes:
       - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
       - mariadb-volume:/var/lib/mysql
-  phpmyadmin:
-    restart: always
-    image: phpmyadmin/phpmyadmin
-    links:
-      - mariadb:db
-    ports:
-     - "8090:80"
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
 volumes:
   code:
